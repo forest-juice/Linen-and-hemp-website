@@ -28,17 +28,31 @@ header {
 	position: fixed;
 }
 
+#logo {
+	display: flex;
+}
+
 header #logo img {
 	line-height: 45px;
-	margin-left: 45%;
-	width: 17%;
+	margin-left: 35%;
+	width: 60px;
+}
+
+header #logo span {
+	cursor: pointer;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+	color: #fff;
+	font-size: 18px;
 }
 
 #about {
 	display: flex;
 	text-align: center;
-	font-size: 1.3em;
-	margin-bottom: 10px;
+	font-size: 18px;
+	margin-top: auto;
+	margin-bottom: auto;
 	line-height: 40px;
 	padding-top: 15px;
 }
@@ -49,9 +63,11 @@ header #logo img {
 }
 
 #about .dropdown {
+	cursor: pointer;
+	margin-top: auto;
 	display: flex;
 	flex-direction: column;
-	margin-left: 10%;
+	margin-left: 7%;
 }
 
 #about .dropdown-content {
@@ -115,6 +131,10 @@ header.fixed #logo {
 	color: #7c7c7c;
 }
 
+header.fixed #logo span {
+	color: #343434;
+}
+
 @media (min-width: 1501px) {
 	#logo {
 		float: left;
@@ -161,11 +181,7 @@ header.fixed #logo {
 }
 
 #top h1 {
-	padding-top: 20%;
-}
-
-#top h3 {
-	color: #ccc;
+	padding-top: 25%;
 }
 
 #Linen {
