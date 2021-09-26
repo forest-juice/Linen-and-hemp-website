@@ -5,23 +5,41 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/main.css">
-	<title="Лён и конопля">
-		</title>
+	<title>Лён и конопля</title>
 </head>
 
 <body>
 
 	<!-- Меню -->
 
-	<header>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<img src="picture/Logo1.png" alt="Logo" onclick="slowScroll('#top')">
+		<ul>
+			<li><a href="#" onclick="slowScroll('#About_us')">О нас</a></li>
+			<li><a href="#" onclick="slowScroll('#Linen')">Лён</a>
+				<ul>
+					<li><a href="#" onclick="slowScroll('#Linen')" title="Переработка тресты масличного льна" class="list">
+							Переработка
+							тресты масличного льна.</a></li>
+					<li><a href="#" onclick="slowScroll('#IndustryCreation')" title="Создание Индустрии" class="list">Как
+							создать новую
+							индустрию льна?</a></li>
+					<li><a href="#" class="list">Link 3</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="slowScroll('#hemp')">Конопля</a>
+				<ul>
+					<li><a href="#" class="list">Link 1</a></li>
+					<li><a href="#" class="list"> Link 2</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="slowScroll('#')">Дополнительные материалы</a></li>
+			<li><a href="#" onclick="slowScroll('#Contact')">Контакты</a></li>
+		</ul>
+	</div>
 
-		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Clients</a>
-			<a href="#">Contact</a>
-		</div>
+	<header id="header">
 
 		<div id="logo" onclick="slowScroll('#top')">
 			<img src="picture/Logo2.png" alt="Logo">
@@ -29,10 +47,10 @@
 		</div>
 		<div id="about">
 			<div class="dropdown">
-				<span onclick="openNav()">О нас </a></span>
+				<span onclick="openNav()"><a href="#" onclick="slowScroll('#About_us')">О нас</a></span>
 			</div>
 			<div class="dropdown">
-				<span class="dropspan">Лён</span>
+				<span onclick="openNav()">Лён</span>
 				<div class="dropdown-content">
 					<a href="#" onclick="slowScroll('#Linen')" title="Переработка тресты масличного льна">Переработка
 						тресты
@@ -43,7 +61,7 @@
 				</div>
 			</div>
 			<div class="dropdown">
-				<span>Конопля</span>
+				<span onclick="openNav()"><a href="#" onclick="slowScroll('#hemp')" title="Конопля">Конопля</a></span>
 				<div class="dropdown-content">
 					<a href="#" onclick="slowScroll('#hemp')" title="Конопля">Конопля</a>
 					<a href="#">Link 2</a>
@@ -54,10 +72,14 @@
 				<span><a href="#" onclick="slowScroll('Materials')" title="Доп материал">Доп материал </a></span>
 			</div>
 			<div class="dropdown">
-				<span><a href="#" onclick="slowScroll('Contact')" title="Контакты">Контакты </a></span>
+				<span><a href="#" onclick="slowScroll('#Contact')" title="Контакты">Контакты </a></span>
 			</div>
 		</div>
 	</header>
+
+	<!-- Начинка сайта -->
+
+
 
 	<!-- 1 Страница -->
 
@@ -68,10 +90,10 @@
 	<!-- Блок "О Нас"	-->
 
 	<div id="About_us">
-		<div class="block-title">
+		<div class="block_title">
 			<span>О нас</span>
 		</div>
-		<div class="block-parent">
+		<div class="block_parent">
 			<div class="block1">
 				<img src="picture/picture_2.jpg" alt="Logo" class="image">
 			</div>
@@ -81,7 +103,8 @@
 					социально-культурной
 					и экономической базы наркомании – то есть снятию с дальневосточной молодежи депрессивного угнетения
 					и
-					перехода к позитивному социальному самочувствию.</span>
+					перехода к позитивному социальному самочувствию.
+				</span>
 			</div>
 		</div>
 	</div>
@@ -335,6 +358,28 @@
 			</span>
 		</div>
 	</div>
+
+
+
+	<!-- Контакты -->
+
+	<div id="Contact">
+		<div class="footer_info">
+			<span> Современная индустрия производства льна и конопли в России на данный момент имеет очень много
+				перспектив, так как имеет большой потенциал и низкую конкурентную способность. Данный сайт отображает все
+				+ и - производства, а также информирует о технологиях, которые существуют на сегодняшний день. </span>
+		</div>
+		<div class="footer_logo">
+			<img src="picture/Logo1.png" alt="Logo">
+		</div>
+		<class class="footer_contact_block">
+			<span>
+				<p>Phone: +7 xxx xxx xx xx</p>
+				<p>Email: xxx@mail.ru</p>
+			</span>
+	</div>
+	</div>
+
 	<!--Скрипты -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -354,13 +399,34 @@
 		});
 
 		function openNav() {
-			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("mySidenav").style.width = "265px";
+			document.getElementById("about").style.display = "none";
+			document.getElementById("logo").style.display = "none";
+			document.getElementById("header").style.zIndex = "-1";
 		}
 
 		/* Установите ширину боковой навигации на 0 */
 		function closeNav() {
 			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("about").style.display = "flex";
+			document.getElementById("logo").style.display = "flex";
+			document.getElementById("header").style.zIndex = "5000";
 		}
+
+		$('body').on('click', function (event) {
+
+			var $menu = $('#mySidenav'),
+				$target = $(event.target);
+			$exception = $('#about');
+
+			//если кликнули в любом другом месте, вне меню - скрываем его
+			if (!$menu.find($target).length & !$exception.find($target).length) {
+				document.getElementById("mySidenav").style.width = "0px";
+				document.getElementById("about").style.display = "flex";
+				document.getElementById("logo").style.display = "flex";
+				document.getElementById("header").style.zIndex = "5000";
+			}
+		});
 	</script>
 </body>
 

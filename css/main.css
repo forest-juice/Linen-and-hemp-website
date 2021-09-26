@@ -20,31 +20,31 @@ body {
 }
 
 .sidenav {
-	height: 100%; /* 100% Full-height */
-	width: 0; /* 0 ширина - изменить это с помощью JavaScript */
-	position: fixed; /* Оставайтесь на месте */
-	z-index: 1; /* Оставайтесь сверху */
-	top: 0; /* Оставайтесь наверху */
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
 	left: 0;
-	background-color: #111; /* Фон черный*/
-	overflow-x: hidden; /* Отключить горизонтальную прокрутку */
-	padding-top: 60px; /* Поместите контент в 60px сверху */
-	transition: 0.5s; /* 0.5 второй эффект перехода слайда в боковой навигации */
+	background-color: #fff;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
 }
 
 /* Ссылки меню навигации */
 .sidenav a {
-	padding: 8px 8px 8px 32px;
+	padding: 5px 5px 5px 32px;
 	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
+	font-size: 22px;
+	color: #6d6565;
 	display: block;
 	transition: 0.3s;
 }
 
 /* Когда вы наводите курсор мыши на навигационные ссылки, изменяется их цвет */
 .sidenav a:hover {
-	color: #f1f1f1;
+	color: #000;
 }
 
 /* Положение и стиль кнопки закрытия (верхний правый угол) */
@@ -54,6 +54,17 @@ body {
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
+}
+
+.sidenav .list {
+	margin-left: 15px;
+	font-size: 15px;
+}
+
+.sidenav img {
+	width: 100px;
+	padding-left: 70px;
+	margin-top: -40px;
 }
 
 header {
@@ -235,13 +246,13 @@ header.fixed .nav-toggle {
 	background-image: url(https://oir.mobi/uploads/posts/2021-03/1616530380_46-p-chisto-chernii-fon-51.jpg);
 }
 
-.block-title {
+.block_title {
 	margin: 50px 0;
 	text-align: center;
 	font-size: 3em;
 }
 
-#About_us .block-parent {
+#About_us .block_parent {
 	display: flex;
 	flex-direction: row;
 	margin-top: 100px;
@@ -401,4 +412,38 @@ header.fixed .nav-toggle {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: #fff;
+}
+
+#Contact {
+	width: 100%;
+	height: auto;
+	padding: 50px 0;
+	display: flex;
+	flex-direction: row;
+	background-image: url(https://bizcom.kz/wp-content/uploads/2014/12/footer-background-011.jpg);
+	color: #fff;
+}
+
+#Contact .footer_info {
+	padding-left: 80px;
+	display: flex;
+	width: 32%;
+	font-size: 20px;
+	float: left;
+	align-self: center;
+}
+
+.footer_logo {
+	display: flex;
+	width: 40%;
+	justify-content: center;
+}
+
+.footer_contact_block {
+	padding-left: 100px;
+	display: flex;
+	width: 28%;
+	font-size: 20px;
+	float: left;
+	align-self: center;
 }
