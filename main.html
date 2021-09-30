@@ -46,40 +46,25 @@
 			<span>Группа компании дар</span>
 		</div>
 		<div id="about">
-			<div class="dropdown">
-				<span onclick="openNav()"><a href="#" onclick="slowScroll('#About_us')">О нас</a></span>
+			<div class="menu">
+				<span><a href="#" onclick="slowScroll('#About_us')">О нас</a></span>
 			</div>
-			<div class="dropdown">
-				<span onclick="openNav()">Лён</span>
-				<div class="dropdown-content">
-					<a href="#" onclick="slowScroll('#Linen')" title="Переработка тресты масличного льна">Переработка
-						тресты
-						масличного льна.</a>
-					<a href="#" onclick="slowScroll('#IndustryCreation')" title="Создание Индустрии">Как создать новую
-						индустрию льна?</a>
-					<a href="#">Link 3</a>
-				</div>
+			<div class="menu">
+				<span onclick="openNav()"><a href="#" onclick="slowScroll('#Linen')" title="Конопля">Лён</a></span>
 			</div>
-			<div class="dropdown">
+			<div class="menu">
 				<span onclick="openNav()"><a href="#" onclick="slowScroll('#hemp')" title="Конопля">Конопля</a></span>
-				<div class="dropdown-content">
-					<a href="#" onclick="slowScroll('#hemp')" title="Конопля">Конопля</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
-				</div>
 			</div>
-			<div class="dropdown">
-				<span><a href="#" onclick="slowScroll('Materials')" title="Доп материал">Доп материал </a></span>
+			<div class="menu">
+				<span><a href="#" onclick="slowScroll('#Materials')" title="Доп материал">Доп материал </a></span>
 			</div>
-			<div class="dropdown">
+			<div class="menu">
 				<span><a href="#" onclick="slowScroll('#Contact')" title="Контакты">Контакты </a></span>
 			</div>
 		</div>
 	</header>
 
 	<!-- Начинка сайта -->
-
-
 
 	<!-- 1 Страница -->
 
@@ -359,7 +344,32 @@
 		</div>
 	</div>
 
+	<div id="bigBlock">
+		<h5>.</h5>
+	</div>
 
+	<!-- Доп материалы -->
+
+	<div id="Materials">
+		<div class="dopinfo">
+			<h1>Дополнительный материал</h1>
+			<h2>Полезные ссылки:</h2>
+			<div class="glavLen">
+				<button type="button" class="lenInfo">Лён</button>
+				<div class="lenInfoDropButtonHidden">
+					<p><a href="">Пример 1</a></p>
+					<p><a href="">Пример 2</a></p>
+				</div>
+			</div>
+			<div class="glavHemp">
+				<button type="button" class="hempInfo">Конопля</button>
+				<div class="HempInfoDropButtonHidden">
+					<p><a href="">Пример 1</a></p>
+					<p><a href="">Пример 2</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Контакты -->
 
@@ -426,6 +436,18 @@
 				document.getElementById("logo").style.display = "flex";
 				document.getElementById("header").style.zIndex = "5000";
 			}
+		});
+
+		$(document).ready(function () {
+			$(".lenInfo").click(function () {
+				$(".lenInfoDropButtonHidden").toggleClass("lenInfoDropButtonActive"); return false;
+			});
+		});
+
+		$(document).ready(function () {
+			$(".hempInfo").click(function () {
+				$(".HempInfoDropButtonHidden").toggleClass("HempInfoDropButtonActive"); return false;
+			});
 		});
 	</script>
 </body>
